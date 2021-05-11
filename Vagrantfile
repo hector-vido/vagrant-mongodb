@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 vms = {
-  'db1' => {'memory' => '4096', 'cpus' => 2, 'ip' => '10', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
-  'db2' => {'memory' => '4096', 'cpus' => 2, 'ip' => '20', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
-  'db3' => {'memory' => '4096', 'cpus' => 2, 'ip' => '30', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
+  'db1' => {'memory' => '2048', 'cpus' => 2, 'ip' => '10', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
+  'db2' => {'memory' => '2048', 'cpus' => 2, 'ip' => '20', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
+  'db3' => {'memory' => '2048', 'cpus' => 2, 'ip' => '30', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh'},
 }
 
 Vagrant.configure('2') do |config|
