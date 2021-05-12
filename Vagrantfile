@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 vms = {
-  'db1' => {'memory' => '2048', 'cpus' => 2, 'ip' => '10', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh', 'type' => 'rs', 'sample' => 0},
+  'db1' => {'memory' => '2048', 'cpus' => 2, 'ip' => '10', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh', 'type' => 'rs', 'sample' => 1},
   'db2' => {'memory' => '2048', 'cpus' => 2, 'ip' => '20', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh', 'type' => 'rs', 'sample' => 0},
   'db3' => {'memory' => '2048', 'cpus' => 2, 'ip' => '30', 'box' => 'debian/buster64', 'provision' => 'mongodb.sh', 'type' => 'rs', 'sample' => 0},
 }

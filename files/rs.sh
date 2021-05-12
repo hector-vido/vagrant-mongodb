@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for X in 20 30; do
+for X in 10 20 30; do
 	ssh -o stricthostkeychecking=no 172.27.11.$X "mongo --eval '//'"
 	while [ "$?" -ne 0 ]; do
 		sleep 1
