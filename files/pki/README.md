@@ -15,7 +15,7 @@ Para gerar os pedidos de assinatura é preciso criar um arquivo com seus valores
 172.27.11.30,db3.example.com,rs0
 ```
 
-> # pode ser utilizado para comentários em linhas sozinhas
+> \# pode ser utilizado para comentários em linhas sozinhas
 
 Com o arquivo pronto, basta executar o script de criação de CSR:
 
