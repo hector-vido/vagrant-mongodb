@@ -1,0 +1,4 @@
+# ip,host,replicaset
+172.27.11.10,db1.example.com,rs0
+172.27.11.20,db2.example.com,rs0
+172.27.11.30,db3.example.com,rs0
