@@ -24,7 +24,16 @@ echo 'deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main' > /etc
 apt-get update
 apt-get install -y mongodb-org
 
-systemctl start mongod
+# Logrotate
+mkdir -p /var/run/mongodb
+chown mongodb: /var/run/mongodb
+cp /vagrant/files/mongodb /etc/logrotate.d/
+if [ "$(grep pidFilePath /etc/mongod.conf)" == '' ]; then
+	sed -Ei 's,/usr/share/zoneinfo,/usr/share/zoneinfo\n  pidFilePath: /var/run/mongodb/mongod.pid,' /etc/mongod.conf
+	sed -Ei 's,/var/log/mongodb/mongod.log,/var/log/mongodb/mongod.log\n  logRotate: reopen,' /etc/mongod.conf
+fi
+
+systemctl restart mongod
 systemctl enable mongod
 
 # Dados de teste
